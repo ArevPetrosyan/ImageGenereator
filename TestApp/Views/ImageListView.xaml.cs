@@ -18,7 +18,7 @@ namespace TestApp
 
         protected override void OnAppearing()
         {
-            //Model.InitModel();
+            //Model.LoadData();
             base.OnAppearing();           
         }
     }
