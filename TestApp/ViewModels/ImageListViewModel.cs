@@ -27,19 +27,19 @@ namespace TestApp.ViewModels
 
         public async void InitModel()
         {
-            try
+            while (true)
             {
-                while (true)
+                try
                 {
                     var data = await ImageServices.GetImageData(AppSettings.AppGuid);
 
                     if (data != null)
                         ImageList.Add(data);
                 }
-            }
-            catch (OverflowException)
-            {
-                ImageList.Clear();
+                catch (OverflowException)
+                {
+                    ImageList.Clear();
+                }
             }
         }
     }
