@@ -25,9 +25,10 @@ namespace TestApp.ViewModels
             }
         }
 
+        private bool unlimitCalls = true;
         public async void InitModel()
         {
-            while (true)
+            while (unlimitCalls)
             {
                 try
                 {
@@ -38,7 +39,8 @@ namespace TestApp.ViewModels
                 }
                 catch (OverflowException)
                 {
-                    ImageList.Clear();
+                    unlimitCalls = false;
+                    //ImageList.Clear();
                 }
             }
         }
