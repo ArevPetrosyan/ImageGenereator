@@ -37,7 +37,7 @@ namespace TestApp
                 Application.Current.Resources["AppGUID"] = AppSettings.AppGuid;
             }
             //При старте приложение обращается к веб-сервису
-            Model.InitModel();
+            Model.LoadData();
         }
 
         protected override void OnSleep()
