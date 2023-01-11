@@ -26,7 +26,7 @@ namespace TestApp.ViewModels
         }
 
         private bool unlimitCalls = true;
-        public async void InitModel()
+        public async void LoadData()
         {
             while (unlimitCalls)
             {
