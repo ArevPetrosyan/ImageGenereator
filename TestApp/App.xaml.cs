@@ -19,7 +19,6 @@ namespace TestApp
         {
             InitializeComponent();
             Model = new ImageListViewModel();
-            //Model.InitModel();
             MainPage = new ImageListView(Model);
         }
 
