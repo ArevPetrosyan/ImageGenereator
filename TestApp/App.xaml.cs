@@ -24,11 +24,11 @@ namespace TestApp
 
         protected override void OnStart()
         {
-            object val;
-            var d = Resources.TryGetValue("AppGUID", out val);
-            if (val != null)
+            object guidApp;
+            Resources.TryGetValue("AppGUID", out guidApp);
+            if (guidApp != null)
             {
-                AppSettings.AppGuid = (Guid)val;
+                AppSettings.AppGuid = (Guid)guidApp;
             }
             else
             {
